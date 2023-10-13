@@ -1,10 +1,9 @@
 import React from 'react';
-import './App.css';
 
 function App() {
   return (
-    <div>
-
+    <div className="bg-stale-200 mt-2 bg-blue-600">
+      Tailwind Example
     </div>
   );
 }
