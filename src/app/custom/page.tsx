@@ -1,9 +1,9 @@
 'use client'
 
 import { useState } from 'react';
-import { Item, items } from '@/common/item';
-import Thumbnail from '@/components/Thumbnail';
-import OptionList from '@/components/OptionList';
+import { Item, items } from '@common/item';
+import Thumbnail from '@components/Thumbnail';
+import OptionList from '@components/OptionList';
 
 function Page() {
   const [item, setItem] = useState(items[0]);

@@ -1,9 +1,9 @@
 'use client'
 
 import React, { useState } from 'react'
-import AnimatedThumbnail from '@/components/AnimatedThumbnail'
-import OptionList from '@/components/OptionList'
-import { Item, items } from '@/common/item';
+import { Item, items } from '@common/item';
+import AnimatedThumbnail from '@components/AnimatedThumbnail'
+import OptionList from '@components/OptionList'
 
 function Page() {
   const [item, setItem] = useState(items[0]);
@@ -21,7 +21,5 @@ function Page() {
     </div>
   )
 }
-
-
 
 export default Page
