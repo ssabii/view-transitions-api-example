@@ -1,0 +1,1 @@
+export const formatNumber = (value: number) => new Intl.NumberFormat('ko-kr', { style: 'currency', currency: 'KRW' }).format(value)
