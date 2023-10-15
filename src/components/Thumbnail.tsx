@@ -4,11 +4,12 @@ import Image from 'next/image'
 
 interface ThumbnailProps {
   item: Item
+  className?: string
 }
 
-function Thumbnail({ item }: ThumbnailProps) {
+function Thumbnail({ item, className }: ThumbnailProps) {
   return (
-    <div>
+    <div className={className}>
       <div className={`relative w-60 h-60`}>
         <Image
           className='absolute'

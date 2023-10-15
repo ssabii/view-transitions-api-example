@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* ::view-transition-old(root),
+::view-transition-new(root) {
+  animation-duration: 5s;
+} */
+
+@keyframes slideOut {
+  to {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+}
+
+.view-thumbnail {
+  view-transition-name: view-thumbnail;
+}
+
+::view-transition-old(view-thumbnail) {
+  animation-name: slideOut;
+  /* animation-duration: 5s; */
+}
+
+::view-transition-new(view-thumbnail) {
+  animation-name: slideIn;
+  /* animation-duration: 5s; */
+}
