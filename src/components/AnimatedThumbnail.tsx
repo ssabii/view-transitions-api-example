@@ -1,13 +1,13 @@
 import React, { useEffect, useRef, useState } from 'react'
-import { Item } from '@/common/item'
+import { Product } from '@common/product'
 
 interface AnimatedThumbnailProps {
-  item: Item
+  item: Product
 }
 
 function AnimatedThumbnail({ item }: AnimatedThumbnailProps) {
-  const [prevItem, setPrevItem] = useState<Item | undefined>(undefined)
-  const [currItem, setCurrItem] = useState<Item | undefined>(item)
+  const [prevItem, setPrevItem] = useState<Product | undefined>(undefined)
+  const [currItem, setCurrItem] = useState<Product | undefined>(item)
   const prevRef = useRef<HTMLImageElement>(null)
   const currRef = useRef<HTMLImageElement>(null)
 
@@ -39,7 +39,7 @@ function AnimatedThumbnail({ item }: AnimatedThumbnailProps) {
 
   return (
     <div>
-      <div className={`relative w-60 h-60`}>
+      <div className="relative w-60 h-60">
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           ref={prevRef}

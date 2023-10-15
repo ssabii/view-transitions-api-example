@@ -1,14 +1,14 @@
 'use client'
 
 import React, { useState } from 'react'
-import { Item, items } from '@common/item';
+import { Product, items } from '@common/product';
 import AnimatedThumbnail from '@components/AnimatedThumbnail'
 import OptionList from '@components/OptionList'
 
 function Page() {
   const [item, setItem] = useState(items[0]);
 
-  const handleClick = (item: Item) => setItem(item);
+  const handleClick = (item: Product) => setItem(item);
 
   return (
     <div className='flex flex-col justify-center items-center'>

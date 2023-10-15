@@ -2,15 +2,19 @@
 
 import React from 'react'
 import Image from 'next/image'
-import { Item } from '@/common/item'
+import { Product } from '@common/product'
 
 interface OptionListProps {
-  items: Item[]
-  selectedItem: Item
-  onClick?: (item: Item) => void
+  items: Product[]
+  selectedItem: Product
+  onClick?: (item: Product) => void
 }
 
-function OptionList({ items, selectedItem, onClick }: OptionListProps) {
+function OptionList({
+  items,
+  selectedItem,
+  onClick
+}: OptionListProps) {
   return (
     <ul className='flex gap-2 justify-center'>
       {items.map((item) => (
@@ -20,11 +24,11 @@ function OptionList({ items, selectedItem, onClick }: OptionListProps) {
         >
           <div className={`
             flex justify-center items-center w-8 h-8 rounded-full
-            hover:border-solid hover:border-2 hover:border-gray-200
-            ${item === selectedItem && 'border-solid border-2 border-blue-500'}`
-          }>
+            hover:border-solid hover:border-2 hover:border-gray-200 cursor-pointer
+            ${item === selectedItem && 'border-solid border-2 border-blue-500'}
+          `}>
             <Image
-              className='rounded-full align-middle cursor-pointer'
+              className="rounded-full"
               src={item.option.image}
               alt={item.option.name}
               width={26}

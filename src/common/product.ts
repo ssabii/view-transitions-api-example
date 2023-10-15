@@ -1,4 +1,4 @@
-export interface Item {
+export interface Product {
   name: string
   image: string
   option: Option
@@ -9,7 +9,7 @@ export interface Option {
   image: string
 }
 
-export const items: Item[] = [
+export const items: Product[] = [
   {
     name: 'MacBook Air 15-inch Midnight',
     image: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mba15-midnight-select-202306?wid=800&hei=800&fmt=jpeg&qlt=90&.v=1684518479433',

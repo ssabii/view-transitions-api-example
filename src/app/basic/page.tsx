@@ -1,14 +1,14 @@
 'use client'
 
 import { useState } from 'react';
-import { Item, items } from '@common/item';
+import { Product, items } from '@common/product';
 import OptionList from '@components/OptionList';
 import Thumbnail from '@components/Thumbnail';
 
-function Page() {
+function BasicPage() {
   const [item, setItem] = useState(items[0]);
 
-  const handleClick = (item: Item) => {
+  const handleClick = (item: Product) => {
     updateView(() => setItem(item))
   }
 
@@ -22,7 +22,7 @@ function Page() {
   }
 
   return (
-    <div className='flex flex-col justify-center items-center'>
+    <div className="flex flex-col justify-center items-center">
       <Thumbnail item={item} />
       <OptionList
         items={items}
@@ -33,4 +33,4 @@ function Page() {
   )
 }
 
-export default Page
+export default BasicPage
