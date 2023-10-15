@@ -12,16 +12,19 @@ interface OptionListProps {
 
 function OptionList({ items, selectedItem, onClick }: OptionListProps) {
   return (
-    <ul className='flex gap-4'>
+    <ul className='flex gap-2 justify-center'>
       {items.map((item) => (
         <li
           key={item.option.name}
-          className="cursor-pointer"
           onClick={() => onClick?.(item)}
         >
-          <div className={`w-8 h-8 rounded-full p-1 ${item === selectedItem && 'border-solid border-2 border-blue-500'}`}>
+          <div className={`
+            flex justify-center items-center w-8 h-8 rounded-full
+            hover:border-solid hover:border-2 hover:border-gray-200
+            ${item === selectedItem && 'border-solid border-2 border-blue-500'}`
+          }>
             <Image
-              className='rounded-full align-middle'
+              className='rounded-full align-middle cursor-pointer'
               src={item.option.image}
               alt={item.option.name}
               width={26}
