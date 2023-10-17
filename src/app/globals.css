@@ -7,29 +7,75 @@
   animation-duration: 5s;
 } */
 
-@keyframes slideOut {
-  to {
-    opacity: 0;
-    transform: translateX(50%);
-  }
-}
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateX(-50%);
-  }
-}
-
 .view-thumbnail {
   view-transition-name: view-thumbnail;
 }
 
 ::view-transition-old(view-thumbnail) {
-  animation-name: slideOut;
+  animation-name: slide-from-right, fade-out;
   /* animation-duration: 5s; */
 }
 
 ::view-transition-new(view-thumbnail) {
-  animation-name: slideIn;
+  animation-name: slide-to-left, fade-in;
   /* animation-duration: 5s; */
+}
+
+.product-list img {
+  contain: layout;
+}
+
+.detail img {
+  view-transition-name: detail-thumbnail;
+  contain: layout;
+}
+
+::view-transition-old(detail-thumbnail),
+::view-transition-new(detail-thumbnail) {
+  z-index: 1;
+  mix-blend-mode: normal;
+}
+
+::view-transition-image-pair(detail-thumbnail) {
+  isolation: none;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+}
+
+@keyframes fade-out {
+  to { opacity: 0; }
+}
+
+
+@keyframes slide-from-right {
+  to {
+    transform: translateX(50%);
+  }
+}
+@keyframes slide-to-left {
+  from {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes scale-up {
+  from {
+    transform: scale(0);
+  }
+
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes scale-down {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(0);
+  }
 }
