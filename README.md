@@ -8,16 +8,6 @@ View Transitions API를 사용했을 때와 비교하기 위해 구현했습니�
 - `/basic`: View Transitions API를 사용한 예제 페이지입니다.
 - `/custom`: View Transitions API를 커스텀해서 상황에 맞게 애니메이션을 구현한 예제 페이지입니다.
 
-## 구현 화면
-
-### 기본
-
-![basic](images/basic.gif)
-
-### 응용
-
-![custom](images/custom.gif)
-
 ## 구현 방법
 `document.startViewTransition(callback)`를 호출하면서 업데이트 하고자 하는 DOM을 `callback`으로 넘겨주면 자연스러운 트랜지션 효과가 나타납니다.
 
@@ -73,3 +63,13 @@ declare global {
   }
 }
 ```
+
+## 구현 화면
+
+### 기본
+
+![basic](images/basic.gif)
+
+### 응용
+
+![custom](images/custom.gif)
