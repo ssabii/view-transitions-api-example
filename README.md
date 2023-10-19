@@ -1,4 +1,4 @@
-## View Transitions API
+## View Transitions API 예제
 [View Transitions API](https://developer.mozilla.org/en-US/docs/Web/API/View_Transitions_API) 예제 레포지토리입니다. Next.js App router 환경에서 구현하였습니다.\
 View Transitions API를 활용하면 애니메이션 트랜지션을 쉽게 만들 수 있습니다.
 
